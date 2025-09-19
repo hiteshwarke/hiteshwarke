@@ -1,6 +1,6 @@
 # 🚀 Hitesh Warke – Driving Innovation with Scalable Full Stack Solutions
 
-![Full Stack Developer](https://img.shields.io/badge/Full%20Stack-Node.js%20|%20Python-yellow|%20React.js%20|%20Laravel-blue?style=for-the-badge&logo=github)  
+![Full Stack Developer](https://img.shields.io/badge/Full%20Stack-Node.js%20|%20Python%20|%20React.js%20|%20Laravel-blue?style=for-the-badge&logo=github)  
 ![Experience](https://img.shields.io/badge/Experience-7%2B%20Years-green?style=for-the-badge&logo=linkedin)  
 
 **Full Stack Developer | Expertise in Node.js, React.js, Laravel, Python, AWS, API Development, and Agile Methodology**  
