@@ -1,1 +1,36 @@
+name: Scheduled Auto Commits
+
+on:
+  schedule:
+    # Mon, Tue, Fri → 2 times (9 PM & 11:45 PM IST)
+    - cron: '30 15 * * 1,2,5'   # 9:00 PM IST (Mon, Tue, Fri)
+    - cron: '15 18 * * 1,2,5'   # 11:45 PM IST (Mon, Tue, Fri)
+
+    # Sat, Sun → 4 times (9 AM, 3 PM, 9 PM, 11:45 PM IST)
+    - cron: '30 3 * * 6,0'      # 9:00 AM IST (Sat, Sun)
+    - cron: '30 9 * * 6,0'      # 3:00 PM IST (Sat, Sun)
+    - cron: '30 15 * * 6,0'     # 9:00 PM IST (Sat, Sun)
+    - cron: '15 18 * * 6,0'     # 11:45 PM IST (Sat, Sun)
+
+  workflow_dispatch: # Manual run option
+
+jobs:
+  auto-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Make a dummy change
+        run: |
+          echo "Last run: $(date)" >> commit-log.txt
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add commit-log.txt
+          git commit -m "🤖 Auto-commit at $(date '+%Y-%m-%d %H:%M %Z')" || echo "No changes to commit"
+          git push
 
