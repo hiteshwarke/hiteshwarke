@@ -84,13 +84,9 @@ I have experience delivering solutions across multiple industries:
 ---
 
 ## 👥 Facebook Groups VOLUNTEER Contributor
-- ![Python GIF](https://media.giphy.com/media/3o7TKP3CucTBCs66Ds/giphy.gif) [Python Programming Tricks](https://www.facebook.com/groups/817852775379405/)
-- ![Python GIF](https://media.giphy.com/media/3o7TKP3CucTBCs66Ds/giphy.gif) [Python Programmers Hub](https://www.facebook.com/groups/142201439713193/)
-- ![PHP GIF](https://media.giphy.com/media/26xBPPnA6NlF0bqS0/giphy.gif) [PHP Programming Community](https://www.facebook.com/groups/1718974144792867/)
-
-- ![Python Logo](https://upload.wikimedia.org/wikipedia/commons/3/3a/Python_logo_2.svg) [Python Programming Tricks](https://www.facebook.com/groups/817852775379405/)
-- ![Python Logo](https://upload.wikimedia.org/wikipedia/commons/3/3a/Python_logo_2.svg) [Python Programmers Hub](https://www.facebook.com/groups/142201439713193/)
-- ![PHP Logo](https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg) [PHP Programming Community](https://www.facebook.com/groups/1718974144792867/) 
+- ![Python GIF](https://github.com/hiteshwarke/assets/raw/main/python-logo.gif) [Python Programming Tricks](https://www.facebook.com/groups/817852775379405/)
+- ![Python GIF](https://github.com/hiteshwarke/assets/raw/main/python-logo.gif) [Python Programmers Hub](https://www.facebook.com/groups/142201439713193/)
+- ![PHP GIF](https://github.com/hiteshwarke/assets/raw/main/php-logo.gif) [PHP Programming Community](https://www.facebook.com/groups/1718974144792867/)  
 
 ---
 
