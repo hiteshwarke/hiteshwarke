@@ -62,8 +62,8 @@ I have experience delivering solutions across multiple industries:
 ---
 
 ## 📊 GitHub Stats
-![Hitesh's GitHub Stats](https://github-readme-stats.vercel.app/api?username=YourGitHubUsername&show_icons=true&theme=radical)  
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=YourGitHubUsername&layout=compact&theme=radical)  
+![Hitesh's GitHub Stats](https://github-readme-stats.vercel.app/api?username=hiteshwarke&show_icons=true&theme=radical)  
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=hiteshwarke&layout=compact&theme=radical)  
 
 ---
 
