@@ -3,7 +3,7 @@
 ![Full Stack Developer](https://img.shields.io/badge/Full%20Stack-Node.js%20|%20React.js%20|%20Laravel-blue?style=for-the-badge&logo=github)  
 ![Experience](https://img.shields.io/badge/Experience-7%2B%20Years-green?style=for-the-badge&logo=linkedin)  
 
-**Full Stack Developer | Expertise in Node.js, React.js, Laravel, AWS, API Development, and Agile Methodology**  
+**Full Stack Developer | Expertise in Node.js, React.js, Laravel, Python, AWS, API Development, and Agile Methodology**  
 
 I specialize in **high-performance web applications, scalable APIs, and AI-powered solutions**, blending **technical expertise with strategic problem-solving**. With over **7 years of experience**, I have delivered **enterprise-grade software solutions** for **SaaS, hospitality, education, FinTech, Telecom, and Pharma industries**.  
 
