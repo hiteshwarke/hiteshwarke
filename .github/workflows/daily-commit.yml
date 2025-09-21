@@ -2,7 +2,6 @@ name: Commit changes
 
 on:
   schedule:
-  
     # ===== Fixed weekdays schedule =====
     # Mon, Tue, Fri → fixed times (9 PM & 11:45 PM IST)
     - cron: '30 15 * * 1,2,5'   # 9:00 PM IST
@@ -10,6 +9,9 @@ on:
 
     # Sat, Sun → run every minute to check random times
     - cron: '* 3-23 * * 6,0'    # 9 AM – 11 PM IST (03–23 UTC)
+
+    # ===== TEST SCHEDULE (every 10 minutes) =====
+    - cron: '*/10 * * * *'   # Test cron: runs every 10 minutes
 
   workflow_dispatch: {}  # Manual run option
 
@@ -21,59 +23,34 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Weekend random commit
+      - name: Auto Commit with Add/Remove logic
         run: |
           # Determine day of week (0=Sun, 6=Sat)
           day=$(date +%w)
 
-          # Weekdays are handled by fixed schedule
-          if [[ "$day" -lt 1 || "$day" -eq 3 || "$day" -eq 4 || "$day" -eq 5 ]]; then
-            echo "Weekday: commit already handled by fixed schedule"
-            exit 0
-          fi
+          # Setup Git config with YOUR NAME & EMAIL
+          git config --local user.name "Hitesh Warke"
+          git config --local user.email "your_verified_email@example.com"
 
-          # File storing daily random commit times (in HHMM UTC)
-          schedule_file=".commit_schedule_${day}.txt"
-
-          # Generate schedule if not exists
-          if [[ ! -f "$schedule_file" ]]; then
-            echo "Generating random commit times for today"
-            > "$schedule_file"
-            for i in {1..5}; do
-              hour=$((RANDOM % 21 + 3))     # 3-23 UTC (9 AM – 11 PM IST)
-              min=$((RANDOM % 60))
-              printf "%02d%02d\n" $hour $min >> "$schedule_file"
-            done
-          fi
-
-          # Current time in HHMM UTC
-          now=$(date -u +'%H%M')
-
-          # Check if current time is in schedule
-          if ! grep -q "$now" "$schedule_file"; then
-            echo "Not scheduled time, skipping commit"
-            exit 0
-          fi
-
-          echo "Scheduled time matched: committing..."
-
-          # Git config locally
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          # Append timestamp
           date_stamp=$(date '+%Y-%m-%d %H:%M:%S')
-          echo "Commit at $date_stamp" >> commit-log.txt
 
-          # Add changes
+          if [[ "$day" -ge 1 && "$day" -le 5 ]]; then
+            echo "Weekday: Adding a new line"
+            echo "Commit at $date_stamp" >> commit-log.txt
+          else
+            echo "Weekend: Removing a line if file not empty"
+            if [[ -s commit-log.txt ]]; then
+              sed -i '$d' commit-log.txt   # delete last line
+            else
+              echo "File empty, adding placeholder line"
+              echo "Weekend placeholder $date_stamp" >> commit-log.txt
+            fi
+          fi
+
           git add commit-log.txt
 
-          # Random commit messages
           messages=("Update docs" "Refactor note" "Minor fix" "Chore: update" "Tweak commit-log" "Edit notes" "Small improvement")
           msg=${messages[$RANDOM % ${#messages[@]}]}
 
-          # Commit if changes exist
           git diff-index --quiet HEAD || git commit -m "$msg ($date_stamp)"
-
-          # Push
           git push origin HEAD
