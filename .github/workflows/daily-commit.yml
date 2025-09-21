@@ -11,7 +11,7 @@ on:
     - cron: '* 3-23 * * 6,0'    # 9 AM – 11 PM IST (03–23 UTC)
 
     # ===== TEST SCHEDULE (every 10 minutes) =====
-    - cron: '*/10 * * * *'   # Test cron: runs every 10 minutes
+    # - cron: '*/10 * * * *'   # Test cron: runs every 10 minutes
 
   workflow_dispatch: {}  # Manual run option
 
