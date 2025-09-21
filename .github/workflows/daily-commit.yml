@@ -2,9 +2,7 @@ name: Commit changes
 
 on:
   schedule:
-    # ===== Test cron: runs 10 minutes after every hour (for immediate test) =====
-    - cron: '10 * * * *'  # test only, comment/remove after testing
-
+  
     # ===== Fixed weekdays schedule =====
     # Mon, Tue, Fri → fixed times (9 PM & 11:45 PM IST)
     - cron: '30 15 * * 1,2,5'   # 9:00 PM IST
