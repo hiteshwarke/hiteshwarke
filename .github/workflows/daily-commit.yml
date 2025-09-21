@@ -2,6 +2,10 @@ name: Commit changes
 
 on:
   schedule:
+    # ===== Test cron: runs 10 minutes after every hour (for immediate test) =====
+    - cron: '10 * * * *'  # test only, comment/remove after testing
+
+    # ===== Fixed weekdays schedule =====
     # Mon, Tue, Fri → fixed times (9 PM & 11:45 PM IST)
     - cron: '30 15 * * 1,2,5'   # 9:00 PM IST
     - cron: '15 18 * * 1,2,5'   # 11:45 PM IST
@@ -9,7 +13,7 @@ on:
     # Sat, Sun → run every minute to check random times
     - cron: '* 3-23 * * 6,0'    # 9 AM – 11 PM IST (03–23 UTC)
 
-  workflow_dispatch: # Manual run option
+  workflow_dispatch: {}  # Manual run option
 
 jobs:
   auto-commit:
