@@ -12,7 +12,8 @@ I specialize in **high-performance web applications, scalable APIs, and AI-power
 ## 👨‍💻 Technical Expertise
 
 ### 🔹 Backend
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white) Node.js, Express.js, PHP, Python, AWS (Lambda, EC2, S3, API Gateway), Laravel, CodeIgniter  
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white), 
+![Express.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white), PHP, Python, AWS (Lambda, EC2, S3, API Gateway), Laravel, CodeIgniter  
 
 ### 🔹 Frontend
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black) React.js, ![Vue](https://img.shields.io/badge/Vue.js-42b883?style=for-the-badge&logo=vue.js&logoColor=white) Vue.js, Next.js, JavaScript (ES6+), HTML/CSS (SASS, LESS, Bootstrap), jQuery, Ajax  
